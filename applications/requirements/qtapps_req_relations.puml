@@ -36,7 +36,8 @@ folder "中台服务" {
 
 [django-qtauth] --> [qtpay-server-django]
 [django-wechatpay] --> [qtpay-server-django]
-[qtpay-server-django] ..> qtpay_apis
+qtuser_auth_apis .up.> [qtpay-server-django]
+[qtpay-server-django] -- qtpay_apis
 
 folder "课程平台" {
     [qtclass-server-django] #Orange
