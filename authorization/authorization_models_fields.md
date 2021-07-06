@@ -1,8 +1,8 @@
-# 认证用户模型
+# 鉴权用户模型
 
-本部分主要用以协调作为生产者的用户服务和作为消费者的各个服务和应用（通过语言和框架级插件）的认证用户模型的设计。
+本部分主要用以协调作为生产者的用户服务和作为消费者的各个服务和应用（通过语言和框架级插件）的鉴权用户模型的设计。
 
-具体来说，是统一用户服务的`qtuser.models.User`、Django用户认证的`django_qtauth.models.AuthUser`、Flutter用户组件库的`qtuser/auth.dart`的`AuthUser`这几个类，让他们在用户认证相关字段保持一致的设计逻辑。
+具体来说，是统一用户服务的`qtuser.models.User`、Django用户认证的`django_remote_auth.models.AuthUser`、Flutter用户组件库的`qtuser/auth.dart`的`AuthUser`这几个类，让他们在用户认证相关字段保持一致的设计逻辑。
 
 认证相关字段包括：
 - `is_anonymous`: 匿名用户标识。
@@ -45,3 +45,14 @@
 此时`is_active=True`，`is_authenticated=True`，`is_anonymous=False`，否则系统异常。
 
 符合Django和DRF的员工用户，参考官方标准实现，并根据企业微信需要的业务逻辑拓展。
+
+
+## 系统管理员
+
+`is_admin=True`。
+
+此时`is_active=True`，`is_authenticated=True`，`is_anonymous=False`，`is_staff=True`，否则系统异常。
+
+符合Django和DRF的系统管理员用户，参考官方标准实现，并且根据系统初始化需要定制。
+
+**请谨慎授权。**
