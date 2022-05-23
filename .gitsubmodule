@@ -1,0 +1,3 @@
+[submodule "qtclass"]
+	path = qtclass
+	url = https://e.coding.net/quanttide/qtclass-app/qtclass-architecture-docs.git
