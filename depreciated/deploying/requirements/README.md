@@ -32,11 +32,3 @@
 ### Django服务端项目
 
 使用pypi制品库：https://help.coding.net/docs/artifacts/quick-start/pypi.html
-
-### Flutter客户端项目
-
-使用Generic制品库：https://help.coding.net/docs/artifacts/quick-start/generic.html
-
-
-
-
