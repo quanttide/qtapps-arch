@@ -1,0 +1,49 @@
+@startuml
+
+title Flutter组件库分层设计
+
+package 应用层 {
+    package 消费者应用 {
+        [qtclass]
+    }
+    package 企业应用 {
+        [qtfinance]
+        [qthr]
+        [qtclass_admin]
+    }
+}
+
+package 领域层 {
+    [admin_widgets]
+    [doc_widgets]
+}
+
+package 通用层 {
+    [responsive_widgets]
+    [adaptive_widgets]
+    [...]
+}
+
+package 原始组件库 {
+    package 官方组件库 {
+        [video_player]
+    }
+    package 社区组件库 {
+        [collapsible_sidebar]
+    }
+    package 自建组件库 {
+        [vod_player]
+    }
+}
+
+qtfinance --> admin_widgets
+qthr --> admin_widgets
+qtclass_admin --> admin_widgets
+
+qtclass --> doc_widgets
+
+admin_widgets --> responsive_widgets
+
+responsive_widgets --> collapsible_sidebar
+
+@enduml 
