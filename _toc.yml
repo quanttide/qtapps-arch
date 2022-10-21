@@ -1,6 +1,7 @@
 format: jb-book
 root: README.md
 chapters:
+  - file: general/README.md
   - file: cloud_services/README.md
     sections:
       - file: cloud_services/websites.md
