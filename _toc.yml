@@ -20,3 +20,6 @@ chapters:
         title: 量潮课堂
       - file: applications/qtcloud/README.md
   - file: topics/README.md
+    sections:
+      - file: topics/pushing_notifications.md
+      - file: topics/feedbacks.md
