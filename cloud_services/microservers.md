@@ -14,6 +14,6 @@
 
 计划使用腾讯云微服务引擎北极星。
 
-![](cloud_services/images/orchestration.jpeg)
+![](images/orchestration.jpeg)
 
 （2022-10-22：旧图。）
