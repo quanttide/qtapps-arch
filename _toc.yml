@@ -28,3 +28,4 @@ chapters:
     sections:
       - file: topics/pushing_notifications.md
       - file: topics/feedbacks.md
+      - file: topics/multi-tenants.md
