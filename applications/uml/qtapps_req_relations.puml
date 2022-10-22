@@ -1,11 +1,11 @@
 @startuml
 title QtApps依赖关系网
 
-folder "Python依赖" {
+folder "Python库" {
     [wechat-login-sdk-py] #SkyBlue
 }
 
-folder "Django依赖" {
+folder "Django库" {
     [django-wechat-login] #SkyBlue
     [django-wechatpay] #SkyBlue
     [django-wecom] #SkyBlue
@@ -15,12 +15,12 @@ folder "Django依赖" {
 
 [wechat-login-sdk-py] --> [django-wechat-login]
 
-folder "Flutter依赖" {
+folder "Flutter库" {
     [flutter-cloudbase] #SkyBlue
     [flutter-admin-widgets] #SkyBlue
 }
 
-folder "中台服务" {
+folder "领域层" {
     [qtuser-server-django] #Orange
     () qtuser_auth_apis #SkyBlue
     () qtstaff_auth_apis #SkyBlue
@@ -39,7 +39,7 @@ folder "中台服务" {
 qtuser_auth_apis .up.> [qtpay-server-django]
 [qtpay-server-django] -- qtpay_apis
 
-folder "课程平台" {
+folder "量潮课堂" {
     [qtclass-server-django] #Orange
     () qtclass_apis #SkyBlue
     () qtclass_admin_apis #SkyBlue
@@ -63,7 +63,7 @@ qtpay_apis ..> [qtclass-client-flutter]
 qtclass_admin_apis ..> [qtclass-admin-client-flutter]
 qtstaff_auth_apis ..> [qtclass-admin-client-flutter]
 
-folder "数据服务平台" {
+folder "量潮数据服务" {
     [qtservices-server-django] #SkyBlue
     () qtservices_apis #SkyBlue
     () qtservices_admin_apis #SkyBlue
@@ -85,7 +85,7 @@ qtservices_apis ..> [qtservices-client-wechatmp]
 qtservices_admin_apis ..> [qtservices-admin-client-flutter]
 qtstaff_auth_apis ..> [qtservices-admin-client-flutter]
 
-folder "企业后台" {
+folder "量潮企业后台" {
     [qtfinance-server-django] #Orange
     () qtfinance_apis #SkyBlue
     [qthr-server-django] #SkyBlue
