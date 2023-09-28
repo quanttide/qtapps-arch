@@ -2,9 +2,7 @@
 
 ## 选型
 
-（2022-10-22更新）计划从腾讯云TDSQL-C MySQL版迁移到PostgreSQL版。
-
-选择PostgreSQL的主要原因是使用schema支持多租户。
+腾讯云TDSQL-C MySQL版。
 
 ## 划分和命名
 
