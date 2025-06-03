@@ -5,7 +5,7 @@
 ## 域名
 
 - 客户端：admin.quanttide.com
-- 服务端：各领域应用的API。
+- 服务端：api.admin.quanttide.com
 
 ## 功能
 
